@@ -1,0 +1,17 @@
+batch_size              Batch size for training.
+resume                  Checkpoint state_dict file to resume training from. If this is "interrupt", the model will resume training from the interrupt file.
+start_iter              Resume training at this iter. If this is -1, the iteration will be determined from the file name.
+num_workers             Number of workers used in dataloading.
+cuda                    Use CUDA to train model.
+lr                      Initial learning rate. Leave as None to read this from the config.
+momentum                Momentum for SGD. Leave as None to read this from the config.
+decay                   Weight decay for SGD. Leave as None to read this from the config.
+gamma                   For each lr step, what to multiply the lr by. Leave as None to read this from the config.
+save_folder             Directory for saving checkpoint models.
+config                  The config object to use.
+save_interval           The number of iterations between saving the model.
+validation_size         The number of images to use for validation.
+validation_epoch        Output validation information every n iterations. If -1, do no validation.
+keep_latest             Only keep the latest checkpoint instead of each one.
+keep_latest_interval    When --keep_latest is on, don't delete the latest file at these intervals. This should be a multiple of save_interval or 0.
+dataset                 If specified, override the dataset specified in the config with this one (example: coco2017_dataset).
